@@ -49,7 +49,12 @@ ext {
     rulesVersion = '1.0.1'
     espressoVersion = '3.0.1'
 
+    constraintLayoutVersion = "1.1.1"
+
     // Architecture Components dependencies
-    roomVersion = "1.0.0"
-    archLifecycleVersion = "1.0.0-rc1"
+    roomVersion = "1.1.0" // for Room
+    lifecycleVersion = "1.1.1" // for ViewModel, LiveData and LifeCycle
+    navigationVersion = "1.0.0-alpha02"
+    pagingVersion = "1.0.0"
+
 }

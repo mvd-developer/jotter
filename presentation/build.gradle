@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion  rootProject.ext.compileSdkVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "mvd.com.jotter"
-        minSdkVersion  rootProject.ext.minSdkVersion
+        minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
@@ -28,8 +28,22 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintLayoutVersion"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //View model
+    implementation "android.arch.lifecycle:extensions:$rootProject.ext.lifecycleVersion"
+    //LifeData
+    implementation "android.arch.lifecycle:livedata:$rootProject.ext.lifecycleVersion"
+    //LifeCycle
+    implementation "android.arch.lifecycle:runtime:$rootProject.ext.lifecycleVersion"
+    //Navigator
+    implementation "android.arch.navigation:navigation-fragment:$rootProject.ext.navigationVersion"
+    implementation "android.arch.navigation:navigation-ui:$rootProject.ext.navigationVersion"
+    //Pager
+    implementation "android.arch.paging:runtime:$rootProject.ext.pagingVersion"
+
 }
